@@ -1,0 +1,130 @@
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home .home-location {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 3px solid var(--text-color);
+}
+
+.home .home-head {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.home .home-head h1 {
+    font-size: 48px;
+    text-align: left;
+    max-width: 600px;
+    width: 100%;
+    color: var(--text-color);
+}
+
+.home .home-head p {
+    max-width: 500px;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--second-bg-color);
+    font-weight: 600;
+    transition: .5s;
+}
+
+.home .home-head p:hover {
+    color: var(--hover-color);
+}
+
+.home-btns {
+    display: flex;
+    gap: 20px;
+}
+
+.home-btns .btn {
+    padding: 20px 32px;
+    border: 2px solid var(--text-color);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: .5s;
+}
+
+.home-btns .btn:nth-child(1) {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.home-btns .btn:nth-child(2) {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.home-btns .btn:nth-child(1) i {
+    animation-name: arrow-anim;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+}
+
+@keyframes arrow-anim {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(10px);
+    }
+}
+
+.home-btns .btn:nth-child(1):hover {
+    color: var(--text-color);
+}
+.home-btns .btn:nth-child(2):hover {
+    color: var(--bg-color);
+}
+
+.home-btns .btn:nth-child(1)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-btns .btn:nth-child(2)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--text-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-btns .btn:nth-child(1):hover::after {
+    width: 100%;
+}
+.home-btns .btn:nth-child(2):hover::after {
+    width: 100%;
+}
+
+.home .home-network {
+    display: flex;
+    gap: 40px;
+    font-size: 32px;
+    color: var(--text-color);
+    position: absolute;
+    bottom: -145px;
+}

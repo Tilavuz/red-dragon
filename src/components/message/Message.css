@@ -1,0 +1,31 @@
+.message-icon {
+    font-size: 28px;
+    position: fixed;
+    right: 5%;
+    top: 86%;
+    background-color: var(--text-color);
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg-color);
+    cursor: pointer;
+    animation-name: message-anim;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes message-anim {
+    0%{
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1.07);
+    }
+}

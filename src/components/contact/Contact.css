@@ -1,0 +1,83 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact h2 {
+    font-size: 48px;
+    color: var(--text-color);
+    margin-bottom: 50px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.contact form input, .contact form textarea {
+    border: 2px solid var(--text-color);
+    padding: 10px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.contact form input::placeholder, .contact form textarea::placeholder {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.contact form .contact-input {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.contact form .contact-input input {
+    width: 50%;
+}
+
+.contact form .btn {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    transition: .8s;
+    overflow: hidden;
+    border: 2px solid var(--text-color);
+    font-size: 18px;
+}
+
+.contact form .btn:hover {
+    color: var(--text-color);
+}
+
+.contact form .btn::after, .contact form .btn::before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    background-color: var(--bg-color);
+    transition: 0.8s;
+}
+
+.contact form .btn::after {
+    left: 0;
+    top: 0;
+}
+
+.contact form .btn::before {
+    right: 0;
+    bottom: 0;
+}
+
+.contact form .btn:hover::after, .contact form .btn:hover::before {
+    width: 100%;
+    height: 100%;
+}

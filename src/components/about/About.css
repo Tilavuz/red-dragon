@@ -1,0 +1,124 @@
+.about {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about .about-slider {
+    width: 350px;
+    border: 1px solid var(--text-color);
+}
+
+.about .about-slider .card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.about .about-slider .card img {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.about .about-slider .card p {
+    color: var(--text-color);
+    letter-spacing: 2px;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.about .about-slider .card span {
+    font-weight: 600;
+    color: var(--hover-color);
+    margin-bottom: 20px;
+}
+.control-dots {
+    background-color: var(--hover-color);
+    position: absolute;
+    bottom: -10px !important;
+}
+
+.about .about-head {
+    MAX-width: 700px;
+}
+.about .about-head h2 {
+    font-size: 48px;
+    text-align: left;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.about .about-head p {
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--second-bg-color);
+    font-weight: 600;
+    transition: .5s;
+    margin-bottom: 20px;
+}
+
+.about .about-head p:hover {
+    color: var(--hover-color);
+}
+
+.about .about-head .about-btns {
+    display: flex;
+}
+
+.about .about-head .about-btns .btn {
+    width: 200px;
+    height: 50px;
+    border: 2px solid var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.about .about-head .about-btns .btn:hover {
+    color: var(--text-color);
+}
+
+.about .about-head .about-btns .btn::after {
+    content: '';
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    background-color: var(--bg-color);
+    transition: .5s;
+    z-index: -1;
+}
+
+.about .about-head .about-btns .btn:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.about .about-head .about-btns .btn i {
+    animation-name: arrow-anim;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+}
+
+.slide {
+    max-width: 400px;
+    height: auto !important;
+}
+
+.thumb{
+    display: none !important;
+}

@@ -1,0 +1,102 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+    z-index: 100;
+    padding: 0 2rem 0 1rem;
+    transition: .5s;
+}
+
+.header .icon {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    transition: .3s;
+    font-weight: 600;
+}
+
+.header .icon:hover {
+    color: var(--hover-color);
+}
+
+
+
+.header .icon img {
+    width: 60px;
+}
+
+.header .icon .icon-span {
+    text-align: left;
+}
+
+.header .icon .icon-span span {
+    color: var(--hover-color);
+    transition: .3s;
+}
+.header .icon:hover .icon-span span {
+    color: var(--text-color);
+}
+
+.header .header-navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.header .header-navbar a {
+    font-size: 18px;
+    color: var(--text-color);
+    transition: .3s;
+    font-weight: 600;
+}
+
+.header .header-navbar a:hover {
+    color: var(--hover-color);
+}
+
+.header .btn {
+    padding: 8px 28px;
+    border: 2px solid var(--text-color);
+    border-radius: 8px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.header .btn::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.header .btn:hover::after {
+    width: 100%;
+}
+
+.header .btn:hover {
+    color: var(--text-color);
+}
+
+#menu-icon {
+    display: none;
+}
+
+.header.sticky {
+    background-color: #fff;
+    box-shadow: 5px 5px 5px 0 red;
+}

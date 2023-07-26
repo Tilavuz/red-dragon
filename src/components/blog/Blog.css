@@ -1,0 +1,46 @@
+.blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blog h2 {
+    font-size: 48px;
+    color: var(--text-color);
+    margin-bottom: 60px;
+}
+
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.swiper-coverflow {
+    width: 100%;
+}
+
+.swiper-slide {
+    width: 400px !important;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 400px;
+    height: 300px;
+}
+
+.swiper-pagination {
+    display: none;
+}
+
+.blog-slider img {
+    margin-bottom: 20px;
+}
+
+.blog-slider p {
+    text-align: left;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
